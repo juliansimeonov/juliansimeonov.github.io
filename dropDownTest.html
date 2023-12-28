@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+
+    <!-- below goes initialization for jQuery for date-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+    <div>
+    <form action="/submit-form" method="post">
+        <label for="dropdown">Select an option:</label>
+        <select id="dropdown" name="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <!-- You can include a submit button if this is part of a form -->
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+    <div>
+        <select id="day" class="date-dropdown">
+            <!-- Options for days go here -->
+        </select>
+        
+        <select id="month" class="date-dropdown">
+            <!-- Options for months go here -->
+        </select>
+        
+        <select id="year" class="date-dropdown">
+            <!-- Options for years go here -->
+        </select>
+      
+        <script>
+            $(function() {
+                $(".date-dropdown").datepicker({
+                    dateFormat: 'dd-mm-yy', // Adjust the date format as needed
+                    changeMonth: true,
+                    changeYear: true,
+                    yearRange: '1900:2030' // Adjust the year range as needed
+                });
+            });
+        </script>
+        
+    </div>
+</body>
+</html>
