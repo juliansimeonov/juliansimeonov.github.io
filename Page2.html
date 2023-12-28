@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<h1>JavaScript Test Page</h1>
+
+<!-- Input Section -->
+<label for="inputText">Enter something:</label>
+<input type="text" id="inputText">
+
+<!-- Button to Trigger JavaScript Function -->
+<button onclick="showOutput()">Show Output</button>
+
+<!-- Output Section -->
+<div id="output"></div>
+
+<!-- JavaScript Code -->
+<script>
+    // JavaScript function to be triggered on button click
+    function showOutput() {
+        // Get the value entered in the input field
+        var inputText = document.getElementById("inputText").value;
+
+        // Process the input (replace this with your JavaScript logic)
+        var outputText = "You entered: " + inputText;
+
+        // Display the output in the specified div
+        document.getElementById("output").innerHTML = outputText;
+    }
+</script>
+
+</body>
+</html>
